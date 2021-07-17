@@ -130,4 +130,3 @@ dmypy.json
 
 # Ignora db_data
 db_data/
-db_data_test/

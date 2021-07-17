@@ -16,21 +16,6 @@ services:
       - ./initial.sql:/docker-entrypoint-initdb.d/initial.sql:ro
     ports:
       - "3306:3306"
-  db_test:
-    image: mysql:5.7
-    environment:
-      MYSQL_USER: userdjango
-      MYSQL_PASSWORD: passworddjango
-      MYSQL_DATABASE: test_django
-      MYSQL_ROOT: root
-      MYSQL_ROOT_PASSWORD: iamroot
-    restart:
-      unless-stopped
-    volumes:
-      - ./db_data_test:/var/lib/mysql
-      - ./initial.sql:/docker-entrypoint-initdb.d/initial.sql:ro
-    ports:
-      - "3306:3306"
   phpmyadmin:
     image: phpmyadmin
     restart: always
