@@ -19,6 +19,7 @@ from encuestas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home),
     path('saludo/', views.saludo),
     path('diego/', views.diego),
 ]
